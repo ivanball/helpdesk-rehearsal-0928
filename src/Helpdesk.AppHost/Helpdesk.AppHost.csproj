@@ -6,6 +6,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UserSecretsId>249c7e98-30e3-4589-85bb-f2709c5abd1d</UserSecretsId>
+    <!-- The Aspire AppHost SDK adds a platform-specific dashboard package
+         (Aspire.Dashboard.Sdk.<the restoring machine's RID>) at restore time, so a lock file
+         generated on a Windows or macOS laptop names win-x64/osx-x64 and fails CI's
+         locked mode restore on ubuntu-latest with NU1004. The AppHost never ships (the
+         release image is published from Helpdesk.Host), so it is opted out of the lock-file
+         requirement Lab 5 turned on solution-wide rather than fighting a lock file that can
+         never agree with every laptop OS and the Linux runner at once. -->
+    <RestorePackagesWithLockFile>false</RestorePackagesWithLockFile>
   </PropertyGroup>
 
   <ItemGroup>
