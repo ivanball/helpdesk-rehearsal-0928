@@ -21,3 +21,4 @@ Domain, Application, Infrastructure, Presentation. Composition root is Helpdesk.
 - Nullable enabled, warnings as errors, file-scoped namespaces.
 - Never: add a NuGet package without asking; touch the database schema without a migration.
 - Ship: see docs/shipping.md (CI runs restore in locked mode; run dotnet restore --force-evaluate after changing a package)
+- MCP: served at /mcp over streamable HTTP by the Host; stdio fallback: dotnet run --project src/Helpdesk.McpStdio
