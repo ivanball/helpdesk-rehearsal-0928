@@ -20,3 +20,4 @@ Domain, Application, Infrastructure, Presentation. Composition root is Helpdesk.
 - Handlers: one command or query per file, handler beside it, internal visibility.
 - Nullable enabled, warnings as errors, file-scoped namespaces.
 - Never: add a NuGet package without asking; touch the database schema without a migration.
+- Ship: see docs/shipping.md (CI runs restore in locked mode; run dotnet restore --force-evaluate after changing a package)
